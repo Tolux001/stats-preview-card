@@ -1,0 +1,183 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Variable declaration*/
+:root{
+    /*Colors*/
+
+    /*Primary Colors*/
+
+    --veryDarkBlue : hsl(233, 47%, 7%);
+    --darkUnsaturatedBlue: hsl(244, 38%, 16%);
+    --softViolet: hsl(277, 64%, 61%);
+
+    /* Neutral*/
+
+    --White: hsl(0, 0%, 100%);
+    --TransparentWhite: hsla(0, 0%, 100%, 0.75);
+    --slightlyTransparentWhite: hsla(0, 0%, 100%, 0.6);
+
+}
+
+/* Fonts */
+@font-face {
+    font-family: "Lexend Deca";
+    src: url(design/asset/Lexend_Deca/LexendDeca-VariableFont_wght.ttf);
+    font-display: swap;
+}
+@font-face {
+    font-family: Inter;
+    src: url(design/asset/Inter/Inter-VariableFont_slnt\,wght.ttf);    
+    font-display: swap;
+}
+a {
+    cursor: pointer;
+}
+body{
+ overflow: auto;
+ background-color: var(--veryDarkBlue);
+ margin: 20px 0 50px 0;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+    max-width: 90%;
+    border-radius: 15px;
+    background-color: var(--darkUnsaturatedBlue);
+    animation: tolux 4s infinite;
+}
+@keyframes tolux {
+    0% {box-shadow: 1px 1px 5px var(--TransparentWhite);}
+    50% {box-shadow: 1px 1px 2px var(--softViolet);}
+    100% {box-shadow: 1px 1px 5px var(--darkUnsaturatedBlue);}
+}
+.desktop-images {
+    display: none;
+}
+.desktop-images img, .mobile-images img {
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    height: 211px;
+    opacity: 0.4;
+    background-color: var(--softViolet);
+}
+@media (min-width:340px) {
+    .overlay {
+        height: 247px;
+    }
+}
+@media (min-width:390px) {
+    .overlay {
+        height: 280px;
+    }
+}
+.section-two {
+    padding: 40px 25px;
+    text-align: center;
+    font-family: Inter, sans-serif;
+}
+.section-main h2 {
+    color: var(--White);
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+.section-main-text {
+    color: var(--TransparentWhite); 
+    line-height: 20px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+.insight {
+    color: var(--softViolet);
+}
+.records h4 {
+    color: var(--White);
+    padding: 28px 0 5px 0;
+    font-family: "Lexend Deca", sans-serif;
+    letter-spacing: 1px;
+}
+.records p {
+    color: var(--slightlyTransparentWhite);
+    font-family: "Lexend Deca", sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+@media (min-width: 768px){
+    body {
+    margin: 0;
+    }
+    .card {
+        width: 700px;    
+    }    
+    .section {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .section-one {
+        flex: 2 0 200px;
+    }
+    .section-two {
+        flex: 2 2 200px;
+    }
+    .desktop-images {
+        display: block;
+    }
+    .mobile-images {
+        display: none;
+    }
+    .desktop-images img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0 15px 15px 0;
+    }
+    .desktop-images {
+        height: 400px; /*This is done to make sure the height of the image inside the container cover the whole width of the container it is in*/
+    }
+    .section-two {
+    padding: 60px 40px;
+    text-align: left;
+    }
+    .records {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .records > div {
+        margin-right: 30px;
+    }
+}
+.attribution {
+    position: fixed;
+    bottom: 0;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    font-size: 13px;
+    text-align: center;
+    width: 100%;
+    padding: 5px 0;
+}
+.attribution a {color: hsl(228, 45%, 44%);}
