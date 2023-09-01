@@ -16,7 +16,7 @@ This is a solution to the [Stats preview card component challenge on Frontend Me
 
 ## Overview
   <b> Scored 100% In Google Page Insight </b>
-  ![Google Page Insight](design/google-page-insight.jpg)
+  https://pagespeed.web.dev/analysis/https-tolux-stats-preview-card-netlify-app/avau43obho?form_factor=mobile
 
 
 ### The challenge
@@ -36,8 +36,8 @@ You can use a tool like [FireShot](https://getfireshot.com/) to take the screens
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
-- Live Site URL: [Live Site URl](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-landing-page-using-flexbox-lFJljBVW-j)
+- Live Site URL: [Live Site URl](https://tolux-stats-preview-card.netlify.app/)
 
 ## My process
 
